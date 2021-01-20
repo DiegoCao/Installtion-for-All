@@ -1,0 +1,6 @@
+As there is no official installation for 20.04 version, record the installtion process here for reference.
+
+First, go to this website:
+https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/
+
+As deb version
