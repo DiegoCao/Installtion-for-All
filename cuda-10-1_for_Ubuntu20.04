@@ -4,3 +4,8 @@ First, go to this website:
 https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/
 
 As deb version
+
+
+https://developer.nvidia.com/cuda-10.2-download-archive?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1804&target_type=deblocal
+
+https://arabelatso.github.io/2020/01/08/Install%20CUDA%20Toolkit%2010.2%20on%20Ubuntu%2018.04.3/
