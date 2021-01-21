@@ -1,6 +1,11 @@
 
 >: warning: If you have not decided to use tensorflow or pytorch, strongly suggest to use pytorch, since the GPU version for tensorflow is so annoying. It requires basically three things: *Cuda, CUDNN,TensorRT*
 
+After days struggling with Tensorflow GPU:
+
+## CUDA
+
+
 As there is no official installation for 20.04 version, record the installtion process here for reference.
 
 First, go to this website:
@@ -13,9 +18,11 @@ https://developer.nvidia.com/cuda-10.2-download-archive?target_os=Linux&target_a
 
 https://arabelatso.github.io/2020/01/08/Install%20CUDA%20Toolkit%2010.2%20on%20Ubuntu%2018.04.3/
 
+If warning comes that 'SSR cannot connect, change `https` to `http` instead.
+
 
 Then if you want to use GPU for tensorflow, cuda is not enough. You will face following warning:
-```
+```libnvinfer.so.6 
 2021-01-21 15:19:15.844026: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libnvinfer.so.6'; dlerror: libnvinfer.so.6: cannot open shared object file: No such file or directory
 2021-01-21 15:19:15.844066: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libnvinfer_plugin.so.6'; dlerror: libnvinfer_plugin.so.6: cannot open shared object file: No such file or directory
 2021-01-21 15:19:15.844071: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:30] Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
@@ -33,3 +40,7 @@ Then download the corresponding CUDNN according to the Ubuntu version and cuda v
 ## Tensor-RT,
 
 After installing CUDNN, error still exists, that is because we do not install TensorRT. It still needs to be installed.
+
+HOWEVER, IT IS VERY SAD THAT FOR UBUNTU20.04, THERE IS NO AVAILABLE TENSORRT VERSION SUPPORTS(*the supports only for ubuntu18.04, and it seems that I have made a huge mistake to install the system UBUNTU20.04 for the computer in the lab*). 
+
+It needs to be noticed that 'libvnifer.so.6', here '6' means, I need to install tensorrt version 6. 
