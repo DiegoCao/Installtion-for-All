@@ -1,3 +1,6 @@
+
+>: warning: If you have not decided to use tensorflow or pytorch, strongly suggest to use pytorch, since the GPU version for tensorflow is so annoying. It requires basically three things: *Cuda, CUDNN,TensorRT*
+
 As there is no official installation for 20.04 version, record the installtion process here for reference.
 
 First, go to this website:
