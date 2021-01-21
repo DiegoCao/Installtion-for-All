@@ -26,3 +26,7 @@ https://developer.nvidia.com/rdp/cudnn-download
 Need to register for an account at first.
 
 Then download the corresponding CUDNN according to the Ubuntu version and cuda version on the computer. 
+
+## Tensor-RT,
+
+After installing CUDNN, error still exists, that is because we do not install TensorRT. It still needs to be installed.
