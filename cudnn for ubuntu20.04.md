@@ -21,13 +21,12 @@ https://arabelatso.github.io/2020/01/08/Install%20CUDA%20Toolkit%2010.2%20on%20U
 If warning comes that 'SSR cannot connect, change `https` to `http` instead.
 
 
-Then if you want to use GPU for tensorflow, cuda is not enough. You will face following warning:
-```libnvinfer.so.6 
-2021-01-21 15:19:15.844026: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libnvinfer.so.6'; dlerror: libnvinfer.so.6: cannot open shared object file: No such file or directory
-2021-01-21 15:19:15.844066: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libnvinfer_plugin.so.6'; dlerror: libnvinfer_plugin.so.6: cannot open shared object file: No such file or directory
-2021-01-21 15:19:15.844071: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:30] Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
-2021-01-21 15:19:16.343918: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
-```
+
+
+
+## CUDNN
+
+If you use pytorch, here, we are already done. But we need tensorflow, so install CUDNN:
 
 The warning indicates that some libraries are not installed entirely, you need to install cuDNN, a library designed for accelerating in ML computation. The installation  for this can be found through:
 
@@ -39,7 +38,16 @@ Then download the corresponding CUDNN according to the Ubuntu version and cuda v
 
 ## Tensor-RT,
 
-After installing CUDNN, error still exists, that is because we do not install TensorRT. It still needs to be installed.
+After installing CUDNN, error still exists,
+
+```libnvinfer.so.6 
+2021-01-21 15:19:15.844026: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libnvinfer.so.6'; dlerror: libnvinfer.so.6: cannot open shared object file: No such file or directory
+2021-01-21 15:19:15.844066: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libnvinfer_plugin.so.6'; dlerror: libnvinfer_plugin.so.6: cannot open shared object file: No such file or directory
+2021-01-21 15:19:15.844071: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:30] Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+2021-01-21 15:19:16.343918: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+```
+
+that is because we do not install TensorRT. It still needs to be installed.
 
 HOWEVER, IT IS VERY SAD THAT FOR UBUNTU20.04, THERE IS NO AVAILABLE TENSORRT VERSION SUPPORTS(*the supports only for ubuntu18.04, and it seems that I have made a huge mistake to install the system UBUNTU20.04 for the computer in the lab*). 
 
