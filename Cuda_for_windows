@@ -1,0 +1,4 @@
+Go to cuda windows official website, download the installer. 
+
+Use installer to install, and it automatically changes the environmental variables. For Cudnn, need to copy bin, lib, x64 file to the corresponding bin, lib, x64 file 
+where cuda is installed.
