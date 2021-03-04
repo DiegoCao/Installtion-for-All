@@ -52,3 +52,7 @@ that is because we do not install TensorRT. It still needs to be installed.
 HOWEVER, IT IS VERY SAD THAT FOR UBUNTU20.04, THERE IS NO AVAILABLE TENSORRT VERSION SUPPORTS(*the supports only for ubuntu18.04, and it seems that I have made a huge mistake to install the system UBUNTU20.04 for the computer in the lab*). 
 
 It needs to be noticed that 'libvnifer.so.6', here '6' means, I need to install tensorrt version 6, but the only good news here is: even without tensorRT 6, you can still run part of the GPU version, so just try to live with it and wait for NVidia company to give new support.
+
+
+A very useful note:
+https://medium.com/analytics-vidhya/installing-tensorflow-with-cuda-cudnn-gpu-support-on-ubuntu-20-04-f6f67745750a
