@@ -56,3 +56,7 @@ It needs to be noticed that 'libvnifer.so.6', here '6' means, I need to install 
 
 A very useful note:
 https://medium.com/analytics-vidhya/installing-tensorflow-with-cuda-cudnn-gpu-support-on-ubuntu-20-04-f6f67745750a
+
+
+Useful note for installing TensorRT:
+https://www.jianshu.com/p/09ef0ad2ef4a
