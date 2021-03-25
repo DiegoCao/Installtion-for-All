@@ -1,6 +1,11 @@
 
 >: warning: If you have not decided to use tensorflow or pytorch, strongly suggest to use pytorch, since the GPU version for tensorflow is so annoying. It requires basically three things: *Cuda, CUDNN,TensorRT*
 
+## SOME ERROR FIX
+
+1. NUMA node returning 0:https://stackoverflow.com/questions/36838770/how-to-interpret-tensorflow-output
+
+
 After days struggling with Tensorflow GPU:
 
 ## CUDA
